@@ -12,7 +12,7 @@
         <div class="barra-navegacion">
             <div class="logo">
 
-                <img src="<?php get_template_directory_uri()?>" alt="">
+                <img src="<?php echo get_template_directory_uri() ?>/img/logo.svg" alt="">
             </div>
 
             <nav>
