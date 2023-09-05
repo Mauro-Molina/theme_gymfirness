@@ -10,6 +10,141 @@
 
 */
 
-body{
-    background: blue;
+:root{
+    /*fuentes de letras*/
+
+    --fuentePrincipal: 'Staatliches', cursive;
+    --fuenteTexto: 'Open Sans', sans-serif;
+    --fuenteSecundaria: 'Raleway', sans-serif;
+
+    /*colores*/
+
+    --colorPrimario: #ff5b00;
+    --grisOscuro: #2f2e2e;
+    --grisClaro: #ebebeb;
+    --blanco: #fff;
+    --black: #000;
 }
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 2;
+    font-family: var(--fuenteSecundaria);
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--fuentePrincipal);
+    margin: 1rem 0;
+    line-height: 1.2;
+}
+
+h1{
+    font-size: 6rem;
+}
+
+h2{
+    font-size: 4.8rem;
+}
+
+h3{
+    font-size: 3.6rem;
+}
+
+h4{
+    font-size: 2.4rem;
+}
+
+/*----Globales-----*/
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.contenedor{
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 autos;
+}
+
+/*----Estilos---*/
+
+/*----header---*/
+
+.site-header{
+    background: var(--grisOscuro);
+    padding: 2rem 0;
+}
+
+.site-header .logo{
+    display: flex;
+    *justify-content: center;
+}
+
+.barra-navegacion{
+    display: flex;
+    justify-content: space-around;
+}
+
+/*--Menu de Navegacion--*/
+
+.menu-principal{
+    display: none;
+}
+
+@media (min-width: 768px){
+    .menu-principal{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .menu-principal .menu{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .menu-principal li{
+        margin-right: 2rem;
+    }
+
+    .menu-principal li:last-of-type{
+        margin-right: 0;
+    }
+
+    .menu-principal a {
+        font-size: 2.6rem;
+    }
+}
+
+.menu-principal a{
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 2.2rem;
+    padding: .5rem 2rem;
+}
+
+.menu-principal .current_page_item{
+    border-bottom: 3px solid var(--colorPrimario);
+}
+
