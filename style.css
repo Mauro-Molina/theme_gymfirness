@@ -31,7 +31,7 @@ html{
     font-size: 62.5%;
 }
 
-*, *:before, *:after{
+*, *::before, *::after{
     box-sizing: inherit;
 }
 
@@ -98,7 +98,6 @@ img{
 
 .site-header .logo{
     display: flex;
-    *justify-content: center;
 }
 
 .barra-navegacion{
@@ -134,7 +133,46 @@ img{
 
     .menu-principal a {
         font-size: 2.6rem;
+        position: relative;
+        z-index: 1;
     }
+
+    .menu-principal a::before,
+    .menu-principal a::after{
+        position: absolute;
+        display: block;
+        content: '';
+        width: 100%;
+        left: 0;
+        height: 50%;
+        background-color: var(--colorPrimario);
+        z-index: -1;
+        transform: scaleX(0);
+        transition: transform .6s;
+    }
+
+    .menu-principal a::before{
+        top: 0;
+        transform-origin: left;
+    }
+
+    .menu-principal a::after{
+        top: 50%;
+        transform-origin: right;
+    }
+
+    .menu-principal a:hover::before{
+        transform: scaleX(1);
+    }
+
+    .menu-principal a:hover::after{
+        transform: scaleX(1);
+    }
+	
+	.slicknav_menu {
+		display:none;
+	}
+
 }
 
 .menu-principal a{
@@ -142,9 +180,28 @@ img{
     color: var(--blanco);
     font-size: 2.2rem;
     padding: .5rem 2rem;
+    display: block;
 }
 
 .menu-principal .current_page_item{
     border-bottom: 3px solid var(--colorPrimario);
 }
 
+.slicknav_menu {
+	background-color: var(--grisOscuro) !important;
+}
+
+.slicknav_btn{
+    background-color: var(--colorPrimario) !important;
+}
+
+.slicknav_nav a{
+    font-size: 2.4rem;
+    text-align: center;
+    font-size: var(--fuentePrincipal);
+}
+
+.slicknav_nav a:hover{
+    background: transparent;
+    color: var(--colorPrimario);
+}
