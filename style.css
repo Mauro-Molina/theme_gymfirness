@@ -84,7 +84,11 @@ img{
 .contenedor{
     max-width: 1200px;
     width: 95%;
-    margin: 0 autos;
+    margin: 0 auto;
+}
+
+hr{
+    border: 1px solid var(--grisClaro);
 }
 
 /*----Estilos---*/
@@ -173,6 +177,16 @@ img{
 		display:none;
 	}
 
+    .contenido-footer{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .site-footer .copy{
+        font-size: 1.8rem;
+         margin: 0;
+    }
+
 }
 
 .menu-principal a{
@@ -204,4 +218,35 @@ img{
 .slicknav_nav a:hover{
     background: transparent;
     color: var(--colorPrimario);
+}
+
+/*---footer----*/
+
+.conenedor-footer{
+    padding: 4rem 0;
+}
+
+.site-footer .menu-principal{
+    display: block;
+}
+
+.site-footer a{
+    color: var(--black);
+    text-align: center;
+}
+
+.site-footer .current_page_item{
+    border-bottom: none;
+}
+
+.contenido-footer .menu-principal a::before,
+.site-footer .menu-principal a::after{
+    display: none;
+}
+
+.site-footer .copy{
+    text-align: center;
+    font-family: var(--fuentePrincipal);
+    font-size: 2rem;
+    margin: 0;
 }
