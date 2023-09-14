@@ -91,6 +91,22 @@ hr{
     border: 1px solid var(--grisClaro);
 }
 
+/*----Utlidades---*/
+
+.texto-primario{
+    color: var(--colorPrimario);
+}
+
+.text-center{
+    text-align: center;
+}
+
+.seccion{
+    padding: 5rem 0;
+}
+
+/*----Utilidades---*/
+
 /*----Estilos---*/
 
 /*----header---*/
@@ -187,6 +203,19 @@ hr{
          margin: 0;
     }
 
+    .pagina.con-sidebar{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .con-sidebar .contenido-principal{
+        flex: 0 0 calc(65% - 2rem);
+    }
+
+    .con-sidebar .sidebar{
+        flex: 0 0 calc(35% - 2rem);
+    }
+
 }
 
 .menu-principal a{
@@ -250,3 +279,17 @@ hr{
     font-size: 2rem;
     margin: 0;
 }
+
+/*----Paginas---*/
+
+.imagen-destacada{
+    margin-bottom: 3rem;
+}
+
+.pagina h1{
+    margin-bottom: 4rem;
+}
+
+
+
+/*----Paginas---*/

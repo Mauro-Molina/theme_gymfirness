@@ -39,12 +39,17 @@ function gymfitnees_scripts_styles(){
 add_action('wp_enqueue_scripts', 'gymfitnees_scripts_styles');
 
 
-//
-
 function gymfitnees_setup(){
     //Habilitar imagens destacadas
 
     add_theme_support('post-thumbnails');
+
+    //Agregar Imagenes de tamano perzonalisado
+    add_image_size('square', 350, 350, true);
+    add_image_size('portrait', 350, 724, true);
+    add_image_size('cajas', 400, 375, true);
+    add_image_size('mediano', 700, 400, true);
+    add_image_size('blog', 966, 644, true);
 }
 
 add_action( 'after_setup_theme', 'gymfitnees_setup');
