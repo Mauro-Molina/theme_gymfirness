@@ -37,3 +37,14 @@ function gymfitnees_scripts_styles(){
 }
 
 add_action('wp_enqueue_scripts', 'gymfitnees_scripts_styles');
+
+
+//
+
+function gymfitnees_setup(){
+    //Habilitar imagens destacadas
+
+    add_theme_support('post-thumbnails');
+}
+
+add_action( 'after_setup_theme', 'gymfitnees_setup');
