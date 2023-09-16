@@ -293,3 +293,14 @@ hr{
 
 
 /*----Paginas---*/
+
+/*----No sidebar---*/
+
+.no-sidebar{
+    display: flex;
+    justify-content: center;
+}
+
+.no-sidebar .contenido-principal{
+    flex: 0 1 800px;
+}
