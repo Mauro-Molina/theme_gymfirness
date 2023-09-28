@@ -5,13 +5,10 @@
        if( has_post_thumbnail()){
          the_post_thumbnail('blog', array('class' => 'imagen-destacada'));
        } else {
-         echo "No hay imagen destacada predefinida";
+         //echo "No hay imagen destacada predefinida";
        }
          ?>
 
      <p><?php the_content(); ?></p>
-
-     <p>Escrito por: <?php the_author(); ?></p>
-     <p>Fecha: <?php the_date(); ?></p>
 
      <?php endwhile ?> 
