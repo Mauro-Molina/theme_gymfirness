@@ -20,7 +20,7 @@ function gymfitnees_scripts_styles(){
     //style.css
     wp_enqueue_style('style', get_stylesheet_uri(), array(), '1.0.0');
     //gogle fonts
-    wp_enqueue_style('googlefonts', 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Raleway:wght@500&family=Staatliches&display=swap', array(), '1.0.0');
+   /* wp_enqueue_style('googlefonts', 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Raleway:wght@500&family=Staatliches&display=swap', array(), '1.0.0'); */
 
     //Slick Nav css
     wp_enqueue_style('SlickNav', $path . '/assents/css/slicknav.min.css', array(), '1.0.10');
@@ -53,3 +53,8 @@ function gymfitnees_setup(){
 }
 
 add_action( 'after_setup_theme', 'gymfitnees_setup');
+
+
+/* Consultas perzonalizables */
+
+  require get_template_directory() . '/inc/queris.php';

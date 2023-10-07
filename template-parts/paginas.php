@@ -9,6 +9,17 @@
        }
          ?>
 
+         <?php
+          if (get_post_type() === 'clases'){
+           
+            $hora_inicio = get_field('hora_de_inicio');
+            $hora_fin = get_field('hora-final');
+          ?>
+
+        <p><?php the_field('dias_de_clases_'); ?> - <?php echo $hora_inicio . " a " . $hora_fin; ?> horas</p>
+         <?php }
+         ?>
+
      <p><?php the_content(); ?></p>
 
      <?php endwhile ?> 
