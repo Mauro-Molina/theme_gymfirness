@@ -1,8 +1,16 @@
-<?php get_header(); ?>
+<?php
+/*
+ *Template Name: Con Sidebar
+ * 
+  */
+ get_header(); ?>
+ 
+ <main class="contenedor pagina seccion con-sidebar">
+   <div class="text-center">
+     <?php get_template_part('template-parts/paginas')?>
+   </div>
 
-<?php while( have_posts(  )) : the_post(); ?>
- <h1><?php the_title(); ?></h1>
- <p><?php the_content(); ?></p>
-<?php endwhile ?>
+   <?php get_sidebar('clases'); ?>
+ </main>
 
 <?php get_footer(); ?>

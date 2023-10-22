@@ -5,6 +5,7 @@
      <?php get_template_part('template-parts/paginas')?>
 
      <?php gymfitnees_lista_clases(); ?>
+     
    </div>
  </main>
 

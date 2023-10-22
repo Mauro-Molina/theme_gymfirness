@@ -58,3 +58,27 @@ add_action( 'after_setup_theme', 'gymfitnees_setup');
 /* Consultas perzonalizables */
 
   require get_template_directory() . '/inc/queris.php';
+
+  /* definir los widgets */
+
+  function gymfitnees_widgets(){
+    register_sidebar( array(
+        'name' => 'Sidebar 1',
+        'id' => 'sidebar',
+        'before_widget' => '<div class="widgets">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+
+    register_sidebar( array(
+        'name' => 'Sidebar 2',
+        'id' => 'sidebar-2',
+        'before_widget' => '<div class="widgets">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+  }
+
+  add_action( 'widgets_init', 'gymfitnees_widgets' );

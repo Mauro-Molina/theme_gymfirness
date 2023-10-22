@@ -376,3 +376,45 @@ hr{
     margin-top: 4rem;
 }
 
+
+/*clases sidebar */
+
+
+.lista-clases.widget-gymfitness-clases{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2rem 1rem;
+    border-bottom: 1px solid var(--grisClaro);
+}
+
+.lista-clases:last-of-type{
+    border: none;
+}
+
+.lista-clases.widget-gymfitness-clases .imagen{
+    flex: 0 0 0 30%;
+}
+
+.lista-clases.widget-gymfitness-clases .contenido-clase{
+    flex-direction: 0 0 calc(70% - 2rem);
+}
+
+.lista-clases.widget-gymfitness-clases .contenido-clase a{
+    color: var(--colorPrimario);
+}
+
+.lista-clases.widget-gymfitness-clases .contenido-clase p{
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: 700;
+    color: #000;
+    text-align: start;
+}
+
+.lista-clases.widget-gymfitness-clases .contenido-clase h3{
+    font-size: 2.3rem;
+    margin: 0;
+    text-align: start;
+}
