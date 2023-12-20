@@ -25,12 +25,21 @@ function gymfitnees_scripts_styles(){
     //Slick Nav css
     wp_enqueue_style('SlickNav', $path . '/assents/css/slicknav.min.css', array(), '1.0.10');
 
+    if(is_page('galeria')) { 
+    //LigthBox Css
+    wp_enqueue_style( 'ligthbox', $path . '/assents/css/lightbox.min.css', array(), '1.0.0' );
+    }
+
     //Slick Nav Js
     wp_enqueue_script('slicknavJS', $path . '/assents/js/slicknav.min.js', array('jquery'), '1.0.10', true);
 
     //Main JS 
-
     wp_enqueue_script('mainJS', $path . '/assents/js/main.js', array('jquery', 'slicknavJS'), '1.0.0', true);
+
+    if(is_page('galeria')) { 
+    //ligthbox js
+    wp_enqueue_script('ligthbox js', $path . '/assents/js/lightbox.min.js', array('jquery'), '1.0.0', true);
+    }
 
     //Jquery Library
     wp_enqueue_script('JQuery', 'https://code.jquery.com/jquery-3.6.0.min.js', array(), '3.6.0', true);
@@ -43,6 +52,10 @@ function gymfitnees_setup(){
     //Habilitar imagens destacadas
 
     add_theme_support('post-thumbnails');
+
+
+    //Soporte para titulos SEO
+    add_theme_support('title-tag');
 
     //Agregar Imagenes de tamano perzonalisado
     add_image_size('square', 350, 350, true);

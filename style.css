@@ -331,7 +331,7 @@ hr{
 }
 
 @media (min-width: 768px) {
-    .lista-clases{
+    .lista-clases, .listado-blog{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -372,7 +372,7 @@ hr{
 
 /*componentes de clases */
 
-.lista-clases{
+.lista-clases, .listado-blog{
     margin-top: 4rem;
 }
 
@@ -398,7 +398,7 @@ hr{
 }
 
 .lista-clases.widget-gymfitness-clases .contenido-clase{
-    flex-direction: 0 0 calc(70% - 2rem);
+    flex-direction: 0 0 calc(70% - 2rem);   
 }
 
 .lista-clases.widget-gymfitness-clases .contenido-clase a{
@@ -418,3 +418,94 @@ hr{
     margin: 0;
     text-align: start;
 }
+
+/*galeria*/
+
+.galeria-imagenes{
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, auto);
+    grid-gap: 2rem;
+
+}
+
+@media (min-width: 768px) {
+    .galeria-imagenes{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .galeria-imagenes:nth-child(4){
+        grid-column: 3 / 5;
+        grid-row: 1 / 3;
+    }
+
+    .galeria-imagenes li:nth-child(6){
+        grid-column: 2 / 3;
+        grid-row: 2 / 4;
+    }
+
+    .card .contenido .meta, .card .contenido .meta a{
+        color: var(--black);
+    }
+}
+
+.galeria-imagenes img{
+    display: block;
+}
+
+.galeria-imagenes li:nth-child(4){
+     grid-row: 2 / 4;
+     grid-column: 2 / 3;
+}
+
+.galeria-imagenes li:nth-child(6){
+    grid-row: 5 / 7;
+}
+
+/*blogspot*/
+
+.card .contenido .meta, .card .contenido .meta a{
+    color: var(--blanco);
+} 
+
+.card .contenido .meta span{
+    color: var(--colorPrimario);
+    font-weight: 700; 
+}
+
+.card .contenido .meta, .card .contenido .meta a, .card .contenido .meta span{
+    font-size: 1.4rem;
+}
+
+.post-categories {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: 10;
+    display: flex;
+}
+
+.post-categories li{
+    background-color: var(--colorPrimario);
+    padding: .5rem 2rem;
+    color: var(--blanco);
+    margin-right: 2rem;
+    border-radius: .5rem;
+}
+
+.post-categories li a{
+    font-size: 2.2rem;
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-weight: bold;
+}
+
+.post-categories li:last-of-type{
+    margin-right: 0;
+}
+
+.post-categories {
+    display: flex;
+}
+
