@@ -116,6 +116,47 @@ hr{
     padding: 2rem 0;
 }
 
+body.home .site-header{
+    padding-top: 2rem;
+    height: 100vh;
+    min-height: 70rem;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+    body.home .site-header{
+        height: 100vh;
+    }
+
+    .header-grid{
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);   
+    }
+
+    .header-grid .barra-navegacion{
+        grid-column: 1 / 5;
+    }
+
+    .tagline{
+        grid-row: 2 / 3;
+        grid-column: 2 / 4;
+        margin-top: 0;
+    }
+
+    .tagline p{
+        font-size: 2.2rem;
+    }
+}
+
+.tagline{
+    color: var(--blanco);
+    margin-top: 10rem;
+}
+
 .site-header .logo{
     display: flex;
 }
@@ -509,3 +550,155 @@ hr{
     display: flex;
 }
 
+/*mapa*/
+
+#map{
+    height: 300px !important;
+}
+
+bodu.home .slicknav_menu{
+    background: transparent;
+}
+
+/*frontpage*/
+
+.bienvenida p{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contenedor-area{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenedor-area .area {
+    *flex: 0 0 100%;
+    height: 300px;
+    width: 25%;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor-area .area img{
+    height: 300px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .contenedor-area .area {
+        flex: 0 0 50%;
+    }
+}
+
+.contenedor-area .area::after {
+   content: '';
+   background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75));
+   display: block;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+}
+
+.contenedor-area .area p{
+    position: absolute;
+    margin: auto;
+    color: var(--blanco);
+    font-size: 2rem;
+    font-weight: 900;
+    z-index: 100;
+    opacity: 0;
+}
+
+
+.contenedor-area .area:hover p{
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+@media (max-width: 480px) {
+    .contenedor-area .area {
+        flex: 0 0 50%;
+    }
+}
+
+/*instructores*/
+
+.listado-instructores {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.listado-instructores .instructores{
+    flex: 0 0 calc(50% - 2rem);
+    margin: 2rem 0 ;
+    border-bottom: 1px solid var(--grisClaro );
+    border-bottom: none;
+    position: relative;
+}
+
+.instructores img{
+    display: block;
+    height: 400px;
+    object-fit: cover;
+}
+
+.instructores .contenido{
+    padding: 2rem 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    transition-delay: .2s;
+}
+
+.instructores:hover .contenido{
+    opacity: 1;
+
+}
+
+.especialidad .etiqueta{
+    margin-right: 2rem;
+    background: var(--colorPrimario);
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    padding: .5rem 2rem;
+    font-size: 2rem;
+    border-radius: 5px;
+}
+
+/**testimoniales**/
+.testimoniales{
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('../gymfitness/img/testimonial-bg.jpg');
+    padding: 12rem 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.texto-blanco{
+    color: #fff;
+}
+
+.contenedor-testimoniales {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    color: #fff;
+}
