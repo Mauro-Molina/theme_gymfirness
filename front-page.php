@@ -141,6 +141,7 @@
     </dic>
 </section>
 
+<<<<<<< HEAD
 <section class="blog contenedor seccion">
     <h2 class="text-center text-primario">Nuestro Blog</h2>
     <p class="text-center">Aprende de nuestros instructores</p>
@@ -148,4 +149,6 @@
     
 </section>
 
+=======
+>>>>>>> 0015eb748253ef9825976aae7252f02fed1515a0
 <?php get_footer(); ?>
